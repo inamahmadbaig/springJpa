@@ -1,0 +1,37 @@
+Task: Employee Management System using Spring
+Boot and CrudRepository
+Objective
+Develop a Spring Boot application to manage Employee records using CrudRepository. Implement
+all major CRUD operations provided by CrudRepository.
+Scenario
+A company wants to maintain employee information in a database. The HR department should be
+able to add, view, update, delete, count, and verify employee records.
+Entity Class: Employee
+employeeId, employeeName, department, salary
+Repository Interface
+public interface EmployeeRepository extends CrudRepository {}
+1. Add Single Employee
+CrudRepository Method: save()
+2. Add Multiple Employees
+CrudRepository Method: saveAll()
+3. View Employee By Id
+CrudRepository Method: findById()
+4. View All Employees
+CrudRepository Method: findAll()
+5. Check Employee Exists
+CrudRepository Method: existsById()
+6. Count Total Employees
+CrudRepository Method: count()
+7. Update Employee Details
+CrudRepository Method: save()
+8. Delete Employee By Id
+CrudRepository Method: deleteById()
+9. Delete Employee Record
+CrudRepository Method: delete()
+10. Delete Multiple Employees
+CrudRepository Method: deleteAll(Iterable)
+11. Delete All Employees
+CrudRepository Method: deleteAll()
+Classes Required
+Employee, EmployeeRepository, EmployeeService, EmployeeServiceImpl, EmployeeController,
+SpringBootCrudRepositoryApplication
