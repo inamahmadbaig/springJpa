@@ -1,0 +1,68 @@
+Employee Management System using
+PagingAndSortingRepository
+Scenario
+A software company wants to develop an Employee Management System to manage employee
+records efficiently. Since the company has thousands of employees, displaying all employee
+records at once is not practical. Therefore, the application should support viewing employee
+records page by page and sorting employees based on different fields such as salary and name.
+Requirements
+1. Create Employee Entity
+Create an Employee class with the following fields:
+private Integer employeeId;
+private String employeeName;
+private String department;
+private Double salary;
+2. Create Repository
+Create an EmployeeRepository interface that extends:
+PagingAndSortingRepository<Employee, Integer>
+3. Service Requirements
+View Employees with Pagination
+Create a method: getEmployeesByPage(int pageNumber, int pageSize)
+View Employees Sorted by Salary
+Create a method: getEmployeesSortedBySalary()
+View Employees Sorted by Name
+Create a method: getEmployeesSortedByName()
+4. Main Application
+Insert at least 10 employee records into the database and perform the following operations:
+1. Display Employee Records (Page 1, Size 3)
+2. Display Employee Records (Page 2, Size 3)
+3. Display Employees Sorted by Salary
+4. Display Employees Sorted by Employee Name
+Sample Test Cases
+Test Case 1
+Input:
+Page Number = 0
+Page Size = 3
+Output:
+101 Rahul IT 45000
+102 Priya HR 40000
+103 Amit Finance 50000
+Test Case 2
+Input:
+Page Number = 1
+Page Size = 3
+Output:
+104 Neha Testing 42000
+105 Arjun IT 55000
+106 Kavya HR 47000
+Test Case 3
+Operation: Sort By Salary
+Output:
+Priya 40000
+Neha 42000
+Rahul 45000
+Kavya 47000
+Amit 50000
+Arjun 55000
+Test Case 4
+Operation: Sort By Employee Name
+Output:
+Amit
+Arjun
+Kavya
+Neha
+Priya
+Rahul
+Expected Concepts
+Spring Boot, Spring Data JPA, PagingAndSortingRepository, Pagination using PageRequest,
+Sorting using Sort, Entity, Service Layer, Repository Layer, CommandLineRunner/Main Class.
