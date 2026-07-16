@@ -1,0 +1,32 @@
+Task 1: Hospital Patient Management System Using Paging
+Scenario
+A multi-specialty hospital stores thousands of patient records. The receptionist wants to view
+patient details page by page instead of loading all records at once.
+Requirements
+Entity: Patient
+Variables
+• patientId
+• patientName
+• disease
+• age
+Classes
+• Patient
+• PatientRepository
+• PatientService
+• PatientServiceImpl
+• AppConfig
+• MainClass
+Instructions
+1. Create Patient entity.
+2. Create PatientRepository extending PagingAndSortingRepository.
+3. Insert at least 15 patient records.
+4. Accept page number and page size.
+5. Display patients page-wise.
+6. Show:
+• Current Page
+• Total Pages
+• Total Records
+Expected Operations
+• View Page 1
+• View Page 2
+• View Page 3
