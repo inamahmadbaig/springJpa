@@ -1,0 +1,31 @@
+Task 2: Movie Ticket Booking System Using Sorting
+Scenario
+A movie booking company wants to display movies sorted by ticket price and movie name so
+customers can easily find suitable movies.
+Requirements
+Entity: Movie
+Variables
+• movieId
+• movieName
+• language
+• ticketPrice
+Classes
+• Movie
+• MovieRepository
+• MovieService
+• MovieServiceImpl
+• AppConfig
+• MainClass
+Instructions
+1. Create Movie entity.
+2. Create MovieRepository extending PagingAndSortingRepository.
+3. Insert minimum 10 movie records.
+4. Implement sorting using Spring Data JPA.
+5. Sort records:
+• Movie Name Ascending
+• Movie Name Descending
+• Ticket Price Ascending
+• Ticket Price Descending
+Expected Operations
+• Sort movies by name.
+• Sort movies by ticket price
