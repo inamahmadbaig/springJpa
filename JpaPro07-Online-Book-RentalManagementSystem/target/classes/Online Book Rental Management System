@@ -1,0 +1,23 @@
+Task 1: Online Book Rental Management System
+Objective
+Develop a Spring Boot application using JpaRepository to manage books available for rent in an
+online library.
+Entity Class: RentalBook
+Variables- Long bookId- String bookTitle- String authorName- String category- Double rentalPrice
+Methods- Getters and Setters- Constructors- toString()
+Repository Interface: RentalBookRepository
+public interface RentalBookRepository extends JpaRepository<RentalBook, Long> {}
+Service Class: RentalBookService
+Methods- saveBook(RentalBook book)- saveAllBooks(List<RentalBook> books)- getBookById(Long id)- getAllBooks()- updateBook(RentalBook book)- deleteBookById(Long id)- deleteAllBooks()- countBooks()- existsBook(Long id)
+Requirements
+1. Add a new rental book using save().
+2. Add multiple rental books using saveAll().
+3. Display all books using findAll().
+4. Search a book by ID using findById().
+5. Check whether a book exists using existsById().
+6. Count total books using count().
+7. Update rental price of a book using save().
+8. Delete a book using deleteById().
+9. Delete all books using deleteAll().
+Main Class
+Perform all operations through CommandLineRunner and print results on console
