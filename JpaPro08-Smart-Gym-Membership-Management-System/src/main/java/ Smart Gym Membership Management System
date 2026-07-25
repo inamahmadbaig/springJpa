@@ -1,0 +1,19 @@
+Task 2: Smart Gym Membership Management System
+Objective
+Develop a Spring Boot application using JpaRepository to manage gym member information.
+Entity Class: GymMember
+Variables- Long memberId- String memberName- String membershipType- Integer membershipDuration- Double fees
+Methods- Getters and Setters- Constructors- toString()
+Repository Interface: GymMemberRepository
+public interface GymMemberRepository extends JpaRepository<GymMember, Long> {}
+Service Class: GymMemberService
+Methods- addMember(GymMember member)- addAllMembers(List<GymMember> members)- getMemberById(Long id)- getAllMembers()- updateMember(GymMember member)- removeMember(Long id)- removeAllMembers()- totalMembers()- memberExists(Long id)
+Requirements
+1. Register a gym member using save().
+2. Register multiple members using saveAll().
+3. Display all members using findAll().
+4. Search member details using findById().
+5. Check member availability using existsById().
+6. Count registered members using count().
+7. Update membership fees using save().
+8. Delete a member using deleteById().
