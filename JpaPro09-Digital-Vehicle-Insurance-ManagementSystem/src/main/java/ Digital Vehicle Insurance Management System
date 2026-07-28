@@ -1,0 +1,23 @@
+Task 3: Digital Vehicle Insurance Management System
+Objective
+Develop a Spring Boot application using JpaRepository to manage vehicle insurance records.
+Entity Class: VehicleInsurance
+Variables- Long insuranceId- String vehicleNumber- String ownerName- String insuranceCompany- Double premiumAmount
+Methods- Getters and Setters- Constructors- toString()
+Repository Interface: VehicleInsuranceRepository
+public interface VehicleInsuranceRepository extends JpaRepository<VehicleInsurance, Long> {}
+Service Class: VehicleInsuranceService
+Methods- addPolicy(VehicleInsurance insurance)- addMultiplePolicies(List<VehicleInsurance> insuranceList)- getPolicyById(Long id)- getAllPolicies()- updatePolicy(VehicleInsurance insurance)- deletePolicy(Long id)- deleteAllPolicies()- countPolicies()- policyExists(Long id)
+Requirements
+1. Add a vehicle insurance policy using save().
+2. Add multiple insurance policies using saveAll().
+3. Display all policies using findAll().
+4. Search policy by ID using findById().
+5. Check policy existence using existsById().
+6. Count total policies using count().
+7. Update premium amount using save().
+8. Delete a policy using deleteById().
+9. Delete all policies using deleteAll().
+Main Class
+Implement all JpaRepository methods through CommandLineRunner and display the results in the
+console
