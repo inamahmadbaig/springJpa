@@ -1,0 +1,33 @@
+Task 1: Hotel Room Booking Management System
+Objective
+Develop a Spring Boot application using Spring Data JPA to manage hotel room bookings and
+perform searches using Or and Between finder methods.
+Database Table: Booking
+bookingId - Long
+guestName - String
+roomType - String
+city - String
+bookingAmount - Double
+numberOfDays - Integer
+bookingDate - LocalDate
+bookingStatus - String
+Insert Sample Data
+Insert at least 10 booking records into the database.
+Repository Interface
+BookingRepository extends JpaRepository<Booking, Long>
+findByCityOrRoomType(String city, String roomType);
+findByBookingAmountBetween(Double minAmount, Double maxAmount);
+findByNumberOfDaysBetween(Integer minDays, Integer maxDays);
+findByBookingStatusOrCity(String status, String city);
+findByBookingDateBetween(LocalDate startDate, LocalDate endDate);
+findByGuestNameOrBookingStatus(String guestName, String status);
+findByRoomTypeOrBookingStatus(String roomType, String status);
+findByBookingIdBetween(Long startId, Long endId);
+CommandLineRunner Operations
+1. Chennai or Suite.
+2. Amount 5000-15000.
+3. Days 2-5.
+4. Confirmed or Hyderabad.
+5. Dates 2026-01-01 to 2026-03-31.
+6. Anita or Cancelled.
+7. Deluxe or Pending.
