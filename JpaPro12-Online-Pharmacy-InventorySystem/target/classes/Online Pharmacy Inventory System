@@ -1,0 +1,34 @@
+Task 2: Online Pharmacy Inventory System
+Objective
+Build a Spring Boot application using Spring Data JPA to manage medicine inventory using Or and
+Between finder methods.
+Database Table: Medicine
+medicineId - Long
+medicineName - String
+category - String
+manufacturer - String
+price - Double
+stockQuantity - Integer
+expiryDate - LocalDate
+rating - Double
+Insert Sample Data
+Insert at least 10 medicine records into the database.
+Repository Interface
+MedicineRepository extends JpaRepository<Medicine, Long>
+findByCategoryOrManufacturer(String category, String manufacturer);
+findByPriceBetween(Double minPrice, Double maxPrice);
+findByStockQuantityBetween(Integer minStock, Integer maxStock);
+findByMedicineNameOrCategory(String medicineName, String category);
+findByExpiryDateBetween(LocalDate startDate, LocalDate endDate);
+findByRatingBetween(Double minRating, Double maxRating);
+findByManufacturerOrCategory(String manufacturer, String category);
+findByMedicineIdBetween(Long startId, Long endId);
+CommandLineRunner Operations
+1. Antibiotic or ABC Pharma.
+2. Price 100-500.
+3. Stock 50-200.
+4. Paracetamol or Pain Relief.
+5. Expiry 2026-06-01 to 2026-12-31.
+6. Rating 4.0-5.0.
+7. HealthCare Ltd or Vitamin.
+8. IDs 201-210
