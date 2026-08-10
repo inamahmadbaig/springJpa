@@ -1,0 +1,32 @@
+Task 2: Hockey Player Tournament Management
+System using @Query, @Version, and
+Timestamping
+Entity: HockeyPlayer
+Fields:- playerId- playerName- teamName- country- role- goals- experience- @Version Integer version- @CreationTimestamp LocalDateTime createdAt- @UpdateTimestamp LocalDateTime updatedAt
+Repository (HockeyPlayerRepository) – @Query Methods
+@Query("SELECT h FROM HockeyPlayer h WHERE h.teamName = :team")
+List<HockeyPlayer> findByTeamName(@Param("team") String team);
+@Query("SELECT h FROM HockeyPlayer h WHERE h.goals > :goals")
+List<HockeyPlayer> findPlayersWithGoalsGreaterThan(@Param("goals") Integer goals);
+@Query("SELECT h FROM HockeyPlayer h WHERE h.role = :role AND h.country = :country")
+List<HockeyPlayer> findByRoleAndCountry(@Param("role") String role,
+                                        @Param("country") String country);
+@Query("SELECT h FROM HockeyPlayer h WHERE h.playerName LIKE %:keyword%")
+List<HockeyPlayer> findByNameContains(@Param("keyword") String keyword);
+@Query("SELECT h FROM HockeyPlayer h WHERE h.experience BETWEEN :minExp AND :maxExp")
+List<HockeyPlayer> findByExperienceBetween(@Param("minExp") Integer minExp,
+                                           @Param("maxExp") Integer maxExp);
+@Query("SELECT COUNT(h) FROM HockeyPlayer h WHERE h.teamName = :team")
+Long countPlayersByTeam(@Param("team") String team);
+@Query("SELECT h FROM HockeyPlayer h ORDER BY h.goals DESC")
+List<HockeyPlayer> findPlayersOrderByGoalsDesc();
+@Modifying
+@Transactional
+@Query("UPDATE HockeyPlayer h SET h.goals = :goals WHERE h.playerId = :id")
+int updateGoals(@Param("id") Long id,@Param("goals") Integer goals);
+@Modifying
+@Transactional
+@Query("DELETE FROM HockeyPlayer h WHERE h.country = :country")
+int deleteByCountry(@Param("country") String country);
+@Query("SELECT h.playerName, h.goals FROM HockeyPlayer h")
+List<Object[]> getPlayerNameAndGoals()
