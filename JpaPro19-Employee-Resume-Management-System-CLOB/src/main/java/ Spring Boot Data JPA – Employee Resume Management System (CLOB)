@@ -1,0 +1,33 @@
+Task 1: Spring Boot Data JPA – Employee Resume Management System (CLOB)
+Scenario
+Develop a Spring Boot application for an HR Management System where employee resumes need
+to be stored in the database. Since resumes can contain large amounts of text data, store them
+using CLOB.
+Entity Class: EmployeeResume
+employeeId : Long
+employeeName : String
+designation : String
+resumeContent : String (CLOB)
+Requirements
+Entity Layer- Create an entity class named EmployeeResume.- Use @Entity and @Table.- Mark employeeId as primary key using @Id.- Store resumeContent using:
+@Lob
+@Column(columnDefinition = "CLOB")
+private String resumeContent;
+Repository Layer
+Create EmployeeResumeRepository extending:
+JpaRepository<EmployeeResume, Long>
+Service Layer
+Implement methods:
+1. Save Employee Resume
+2. View Employee Resume by Id
+3. View All Employee Resumes
+4. Delete Employee Resume
+Runner Class
+Using CommandLineRunner:- Insert 3 employee resumes.- Fetch and display all employee resumes.- Retrieve a resume using employee id.- Delete one employee record.
+Expected Output
+Employee Resume Saved Successfully
+Employee Id : 101
+Employee Name : John
+Designation : Java Developer
+Resume Content : Experienced Java Developer with 5 years of experience...
+Employee Resume Deleted Successfull
