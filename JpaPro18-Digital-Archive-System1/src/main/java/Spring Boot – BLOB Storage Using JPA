@@ -1,0 +1,16 @@
+Task 2: Spring Boot – BLOB Storage Using JPA
+Repository
+Scenario
+Build a Spring Boot application for a Digital Archive System that stores scanned certificates as
+binary data in the database.
+Entity Class: ArchiveDocument
+Fields:- Long documentId- String documentTitle- String ownerName- String fileType- byte[] documentData (@Lob)
+Requirements:
+1. Create the ArchiveDocument entity.
+2. Annotate documentData with @Lob to store it as a BLOB.
+3. Create an ArchiveDocumentRepository extending JpaRepository<ArchiveDocument, Long>.
+4. Implement: Save file, Retrieve by ID, Update binary file, Delete, Display metadata.
+5. Insert at least 3 sample records.
+6. Verify retrieved BLOB can be written back to a file.
+7. Test using CommandLineRunner or REST APIs.
+Expected Learning:- @Lob for BLOB storage- Binary file handling in Java- JpaRepository- CRUD on large objects- Reading/writing files with byte[]
