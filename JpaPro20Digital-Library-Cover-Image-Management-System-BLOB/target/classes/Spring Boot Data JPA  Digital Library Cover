@@ -1,0 +1,39 @@
+Task 2: Spring Boot Data JPA – Digital Library Cover Image Management System (BLOB)
+Scenario
+Develop a Spring Boot application for a Digital Library where each book has a cover image. Since
+images are binary data, store them using BLOB.
+Entity Class: LibraryBook
+bookId : Long
+bookTitle : String
+authorName : String
+coverImage : byte[] (BLOB)
+Requirements
+Entity Layer- Create an entity class named LibraryBook.- Use @Entity and @Table.- Mark bookId as primary key using @Id.- Store image data using:
+@Lob
+@Column(columnDefinition = "BLOB")
+private byte[] coverImage;
+Repository Layer
+Create LibraryBookRepository extending:
+JpaRepository<LibraryBook, Long>
+Service Layer
+Implement methods:
+1. Save Book Details with Cover Image
+2. Find Book By Id
+3. View All Books
+4. Delete Book
+Runner Class
+Using CommandLineRunner:- Read image files from local system.- Convert images into byte arrays.- Store 3 book records with cover images.- Retrieve and display book information.- Display image size using book.getCoverImage().length
+Expected Output
+Book Saved Successfully
+Book Id : 201
+Book Title : Spring Boot in Action
+Author : Robert
+Image Size : 152430 bytes
+Book Retrieved Successfully
+Book Id : 201
+Book Title : Spring Boot in Action
+Author : Robert
+Book Deleted Successfully
+Concepts Covered
+Task 1 (CLOB)- @Lob- CLOB Data Storage- Large Text Handling- Spring Data JPA CRUD Operations- JpaRepository
+Task 2 (BLOB)- @Lob- BLOB Data Storage- File Handling in Java- Converting Image to byte[]- Spring Data JPA CRUD Operations- JpaRepositor

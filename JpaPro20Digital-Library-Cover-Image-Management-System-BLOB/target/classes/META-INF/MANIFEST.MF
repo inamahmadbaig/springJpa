@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Java-Version: 21
+Build-Jdk-Spec: 21
+Implementation-Title: JpaPro20Digital-Library-Cover-Image-Management-Sys
+ tem-BLOB
+Implementation-Version: 0.0.1-SNAPSHOT
+Created-By: Maven Integration for Eclipse
+
