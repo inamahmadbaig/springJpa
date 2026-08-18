@@ -1,0 +1,57 @@
+Spring Boot Data JPA - OneToMany Relationship
+Assignments
+Question 1: Spring Boot Data JPA – University Course
+Management System (@OneToMany Unidirectional)
+Scenario
+Develop a Spring Boot application for a University Management System where one University
+offers multiple Courses. Store university and course details using Spring Data JPA and establish a
+Unidirectional One-to-Many relationship. In this application, navigation should be possible only
+from University to Course.
+University
+Course
+Relationship
+Field
+Type
+universityId
+Long
+universityName String
+city
+String
+courses
+List<Course>
+Field
+Type
+courseId
+Long
+courseName String
+duration
+fee
+• Use @OneToMany in University.
+• Use @JoinColumn to create the foreign key.
+• Do not use @ManyToOne in Course.
+• Use CascadeType.ALL.
+• This relationship must be Unidirectional.
+Requirements
+1. Create University and Course entities.
+String
+Double
+2. Configure a Unidirectional @OneToMany relationship.
+3. Save one University with multiple Courses.
+4. Retrieve University details along with Course information.
+5. Use Spring Data JPA Repository.
+6. Display data using CommandLineRunner.
+7. Store the foreign key in the Course table using @JoinColumn.
+Sample Output
+University Details-----------------
+University Id : 101
+University Name : Global University
+City : Hyderabad
+Course Details-------------
+Course Id : 1
+Course Name : Java Full Stack
+Duration : 6 Months
+Fee : 25000.0
+Course Id : 2
+Course Name : Spring Boot
+Duration : 3 Months
+Fee : 15000.0
