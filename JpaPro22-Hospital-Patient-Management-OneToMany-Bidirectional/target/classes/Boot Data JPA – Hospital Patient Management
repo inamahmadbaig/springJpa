@@ -1,0 +1,65 @@
+Question 2: Spring Boot Data JPA – Hospital Patient Management
+System (@OneToMany Bidirectional)
+Scenario
+Develop a Spring Boot application for a Hospital Management System where one Doctor can treat
+multiple Patients. Store doctor and patient details using Spring Data JPA and establish a
+Bidirectional One-to-Many relationship. In this application, navigation should be possible from
+Doctor to Patient and from Patient to Doctor.
+Doctor
+Patient
+Relationship
+Field
+Type
+doctorId
+doctorName
+Long
+String
+specialization String
+patients
+List<Patient>
+Field
+Type
+patientId
+Long
+patientName String
+disease
+age
+doctor
+• Use @OneToMany(mappedBy="doctor") in Doctor.
+• Use @ManyToOne in Patient.
+• Use CascadeType.ALL.
+• This relationship must be Bidirectional.
+Requirements
+1. Create Doctor and Patient entities.
+String
+Integer
+Doctor
+2. Configure a Bidirectional @OneToMany relationship using mappedBy.
+3. Save one Doctor with multiple Patients.
+4. Retrieve Doctor details along with Patient information.
+5. Retrieve Patient details along with assigned Doctor information.
+6. Use Spring Data JPA Repository.
+7. Display data using CommandLineRunner.
+Sample Output
+Doctor Details-------------
+Doctor Id : 201
+Doctor Name : Dr. Sharma
+Specialization : Cardiologist
+Patient Details--------------
+Patient Id : 1
+Patient Name : Raj
+Disease : Heart Problem
+Age : 35
+Patient Id : 2
+Patient Name : Priya
+Disease : High Blood Pressure
+Age : 42
+Patient View
+Patient Details--------------
+Patient Id : 1
+Patient Name : Raj
+Disease : Heart Problem
+Assigned Doctor--------------
+Doctor Id : 201
+Doctor Name : Dr. Sharma
+Specialization : Cardiologis
