@@ -1,0 +1,41 @@
+Spring Boot Data JPA - HAS-A Relationship
+Assignments
+Question 1: Spring Boot Data JPA – Customer and PAN Card
+Management System (@OneToOne Bidirectional)
+Scenario
+A financial organization wants to maintain customer records along with their PAN card details.
+Every customer can have only one PAN card, and every PAN card belongs to only one customer.
+Develop a Spring Boot application using Spring Data JPA to manage Customer and PAN Card
+information by implementing a Bidirectional One-to-One Relationship.
+Relationship (HAS-A Relationship)
+• Customer HAS-A PAN Card
+• One Customer fi One PAN Card
+• One PAN Card fi One Customer
+• Navigation should be possible from both entities.
+• Use: @OneToOne, @JoinColumn, Cascade Operations
+Entity 1 : Customer
+Field Name
+customerId
+Data Type
+Long
+customerName String
+email
+city
+Entity 2 : PanCard
+String
+String
+Field Name Data Type
+panId
+Long
+panNumber String
+issueDate
+Application Requirements
+1. Create Customer and PanCard entity classes.
+String
+2. Implement HAS-A Relationship using Bidirectional @OneToOne Mapping.
+3. Create CustomerRepository and PanCardRepository.
+4. Save Customer along with PAN Card details.
+5. Fetch Customer details along with associated PAN Card information.
+6. Display all Customer records with PAN Card details.
+7. Delete Customer and automatically delete associated PAN Card using Cascade operation.
+8. Use CommandLineRunner to create objects, establish relationship, save data and retrieve data.
