@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Java-Version: 21
+Build-Jdk-Spec: 21
+Implementation-Title: JpaPro25-Product-Inventory-Management-System-Versi
+ on
+Implementation-Version: 0.0.1-SNAPSHOT
+Created-By: Maven Integration for Eclipse
+

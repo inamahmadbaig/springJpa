@@ -1,0 +1,30 @@
+Question 1: Spring Boot Data JPA – Product Inventory
+Management System (@Version)
+Scenario
+Develop a Spring Boot application for a Product Inventory Management System. The
+company wants to prevent multiple users from updating the same product record
+simultaneously. Implement Optimistic Locking using the @Version annotation.
+Requirements
+Create an Entity named Product.
+Field Type
+productId Integer
+productName String
+price Double
+quantity Integer
+version Integer
+Business Requirements
+Create Product Entity.
+Use @Version on the version field.
+Create JPA Repository.
+Save multiple product records.
+Fetch a product using Product Id.
+Update product details.
+Verify that the version number automatically increments after every successful update.
+Display all product details including version.
+Concepts Covered
+Spring Boot
+Spring Data JPA
+Entity Mapping
+Repository
+Optimistic Locking
+@Version
