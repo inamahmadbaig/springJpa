@@ -1,0 +1,39 @@
+Question 2: Spring Boot Data JPA – Employee
+Attendance System (Timestamping)
+Scenario
+Develop a Spring Boot application for an Employee Attendance System. Whenever an
+employee record is created or modified, the application should automatically maintain the
+creation and last updated timestamps.
+Requirements
+Create an Entity named Employee.
+Field
+employeeId
+employeeName
+department
+salary
+createdDate
+updatedDate
+Business Requirements
+Type
+Integer
+String
+String
+Double
+LocalDateTime
+LocalDateTime
+Create Employee Entity.
+Automatically store record creation time.
+Automatically update modification time whenever data changes.
+Create JPA Repository.
+Save employee details.
+Update employee information.
+Display employee information along with created and updated timestamps.
+Note: Use JPA Timestamping annotations for automatic date/time management.
+Concepts Covered
+Spring Boot
+Spring Data JPA
+Entity Mapping
+Repository
+Automatic Timestamping
+Creation Timestamp
+Update Timestamp
