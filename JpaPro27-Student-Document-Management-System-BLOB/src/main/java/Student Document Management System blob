@@ -1,0 +1,33 @@
+Question 3: Spring Boot Data JPA – Student Document
+Management System (BLOB)
+Scenario
+Develop a Spring Boot application for a Student Document Management System. The
+application should store student information along with their scanned ID card or
+photograph in the database.
+Requirements
+Create an Entity named Student.
+Field
+studentId
+studentName
+course
+photo
+Business Requirements
+Create Student Entity.
+Type
+Integer
+String
+String
+byte[]
+Store student photo as Binary Large Object (BLOB).
+Create JPA Repository.
+Save student details with photo.
+Retrieve student details.
+Display student information.
+Verify that the binary data is successfully stored and retrieved.
+Concepts Covered
+Spring Boot
+Spring Data JPA
+Entity Mapping
+Repository
+@Lob
+Binary Large Object (BLOB)
