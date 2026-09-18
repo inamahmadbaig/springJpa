@@ -1,0 +1,32 @@
+Question 4: Spring Boot Data JPA – Library Book
+Description System (CLOB)
+Scenario
+Develop a Spring Boot application for a Library Book Description System. The library
+wants to store detailed book descriptions that may contain thousands of characters.
+Requirements
+Create an Entity named Book.
+Field
+bookId
+bookTitle
+author
+description
+Type
+Integer
+String
+String
+String
+Business Requirements
+Create Book Entity.
+Store book description as Character Large Object (CLOB).
+Create JPA Repository.
+Save multiple book records.
+Retrieve book details.
+Display complete book description.
+Verify that lengthy text is stored successfully.
+Concepts Covered
+Spring Boot
+Spring Data JPA
+Entity Mapping
+Repository
+@Lob
+Character Large Object (CLOB
