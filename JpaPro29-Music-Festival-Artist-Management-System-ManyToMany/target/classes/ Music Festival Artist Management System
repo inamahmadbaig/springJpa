@@ -1,0 +1,28 @@
+Spring Boot @ManyToMany using JPA Repository- Practice Tasks
+Task 1: Music Festival Artist Management System
+Objective
+Develop a Spring Boot application to manage Artists and Music Festivals using a Many-to-Many
+relationship.
+Relationship- One Artist can perform at multiple Festivals.- One Festival can have multiple Artists.
+Relationship Type: @ManyToMany
+Entity 1: Artist
+Variables:- artistId- artistName- genre- country- experienceYears
+Entity 2: Festival
+Variables:- festivalId- festivalName- city- eventDate- ticketPrice
+Repository Tasks
+1. Save a new Artist with multiple Festivals.
+2. Save a new Festival with multiple Artists.
+3. Find Artist by artistName.
+4. Find Festival by festivalName.
+5. Find all Artists performing in a particular Festival.
+6. Find all Festivals attended by a particular Artist.
+7. Update Festival ticketPrice.
+8. Update Artist experienceYears.
+9. Delete an Artist.
+10. Delete a Festival.
+11. Display all Artists.
+12. Display all Festivals.
+Expected Join Table
+artist_festival
+artist_id
+festival_id
