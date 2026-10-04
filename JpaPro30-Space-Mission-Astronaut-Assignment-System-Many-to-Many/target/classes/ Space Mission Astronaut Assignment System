@@ -1,0 +1,27 @@
+Task 2: Space Mission Astronaut Assignment System
+Objective
+Develop a Spring Boot application to manage Astronauts and Space Missions using a
+Many-to-Many relationship.
+Relationship- One Astronaut can participate in multiple Space Missions.- One Space Mission can include multiple Astronauts.
+Relationship Type: @ManyToMany
+Entity 1: Astronaut
+Variables:- astronautId- astronautName- specialization- nationality- totalFlights
+Entity 2: SpaceMission
+Variables:- missionId- missionName- launchYear- destination- missionDuration
+Repository Tasks
+1. Save an Astronaut with multiple Space Missions.
+2. Save a Space Mission with multiple Astronauts.
+3. Find Astronaut by astronautName.
+4. Find Mission by missionName.
+5. Find all Missions assigned to a specific Astronaut.
+6. Find all Astronauts participating in a specific Mission.
+7. Update Mission destination.
+8. Update Astronaut totalFlights.
+9. Delete an Astronaut.
+10. Delete a Space Mission.
+11. Display all Astronauts.
+12. Display all Space Missions.
+Expected Join Table
+astronaut_mission
+astronaut_id
+mission_id
