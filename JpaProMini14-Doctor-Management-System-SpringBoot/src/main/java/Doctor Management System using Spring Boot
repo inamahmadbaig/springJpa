@@ -1,0 +1,52 @@
+Doctor Management System using Spring Boot
+JPA Repository, Versioning, Hibernate
+Timestamping and Finder Methods
+Objective
+Develop a Spring Boot application using Spring Data JPA, Hibernate Versioning (@Version),
+Hibernate Automatic Timestamping (@CreationTimestamp, @UpdateTimestamp), and advanced
+finder methods.
+Entity: Doctor
+doctorId - Long
+doctorName - String
+specialization - String
+hospitalName - String
+city - String
+consultationFee - Double
+experience - Integer
+email - String
+@Version version - Integer
+@CreationTimestamp createdAt - LocalDateTime
+@UpdateTimestamp updatedAt - LocalDateTime
+Requirements
+• Use @Version for optimistic locking.
+• Use @CreationTimestamp for automatic record creation timestamp.
+• Use @UpdateTimestamp for automatic update timestamp.
+• Verify version increments automatically after updates.
+• Verify createdAt remains unchanged while updatedAt changes after updates.
+Insert Sample Data
+Insert at least 10 doctor records.
+Repository Layer
+DoctorRepository extends JpaRepository<Doctor, Long>
+findByDoctorNameLike(String pattern)
+findBySpecializationIn(List<String> specializations)
+findByDoctorNameStartingWith(String prefix)
+findByDoctorNameEndingWith(String suffix)
+findByCityIn(List<String> cities)
+findByHospitalNameLike(String pattern)
+findByEmailEndingWith(String domain)
+findBySpecializationStartingWith(String prefix)
+CommandLineRunner Operations
+1. Find doctors whose names match LIKE '%Raj%'.
+2. Find doctors whose specialization is in [Cardiology, Neurology].
+3. Find doctors whose names start with 'Dr. A'.
+4. Find doctors whose names end with 'Kumar'.
+5. Find doctors located in Chennai or Bengaluru using IN.
+6. Find hospitals matching LIKE '%Care%'.
+7. Find doctors with email ending '@hospital.com'.
+8. Find specializations starting with 'Ortho'.
+9. Update a doctor record and verify version increments.
+10. Verify createdAt remains unchanged while updatedAt changes after update.
+Expected Concepts Covered
+Spring Boot, Spring Data JPA, Hibernate, JpaRepository, Derived Query Methods, LIKE, IN,
+StartingWith, EndingWith, @Version, @CreationTimestamp, @UpdateTimestamp, Optimistic
+Locking, Automatic Audit Timestamping, and CommandLineRunner.
